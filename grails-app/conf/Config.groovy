@@ -41,6 +41,8 @@ grails.views.default.codec = "html"
 // If unspecified, controllers are prototype scoped.
 grails.controllers.defaultScope = 'singleton'
 
+grails.app.context = "/"
+
 // GSP settings
 grails {
     views {
@@ -114,4 +116,14 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+}
+
+abc.xyz.myName = "Learning Management"
+
+abc {
+    xyz {
+        myName = "Learning Management"
+        myPassword = "123456"
+        myKey = "jhsdfnv"
+    }
 }
