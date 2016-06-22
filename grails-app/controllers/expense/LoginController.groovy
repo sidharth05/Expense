@@ -8,17 +8,19 @@ class LoginController {
 
     def loginDetails() {
         println params
+        def email = params.email
+        def password = params.password
 
-        def result = User.createCriteria().list {
-            and {
-                eq("firstName", "${params.firstName}")
-                eq("password", "${params.password}")
-            }
-            return User.list()
+        def result = User.findByEmailAndPassword(email, password)
+
+        if (result) {
+            session.currentLogin = result
         }
-        session.currentLogin = result
-        redirect(view: "index")
+        render(view: "home", model: [current: session.currentLogin])
     }
 
+    def home() {
+
+    }
 
 }
