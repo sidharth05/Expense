@@ -10,11 +10,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="layout" content="beforeLoginNav">
+    <meta name="layout" content="afterLoginNav">
     <title>List Page</title>
 </head>
 <body>
-    <h1>Details of all input User</h1>
+    <h1>Data Updated</h1>
 
     <div>
         <table class="table table-striped">

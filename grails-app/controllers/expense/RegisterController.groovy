@@ -14,10 +14,13 @@ class RegisterController {
 
         myUser.save()
 
-        render(view: "list", model: [allUsers: myUser])
+        session.currentUser = myUser
+
+        render(view: "list", model: [allUsers: session.currentUser])
     }
 
     def list() {
-        [allUsers: User.list()]
+
     }
+
 }

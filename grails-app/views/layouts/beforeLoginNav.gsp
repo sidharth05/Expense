@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><g:layoutTitle default="An example decorator" /></title>
     <asset:stylesheet href="bootstrap.min.css"/>
     <asset:javascript src="jquery.min.js"/>
@@ -32,16 +34,7 @@
                     <g:link controller="register" action="register">Register</g:link>
                 </li>
                 <li>
-                    <g:link>Login</g:link>
-                </li>
-                <li>
-                    <g:link>Edit</g:link>
-                </li>
-                <li>
-                    <g:link>Logout</g:link>
-                </li>
-                <li>
-                    <g:link controller="register" action="list">List</g:link>
+                    <g:link controller="login" action="login">Login</g:link>
                 </li>
             </ul>
         </div>
