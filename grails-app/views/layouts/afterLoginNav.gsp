@@ -31,7 +31,8 @@
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Menu<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li>
                             <g:link controller="login" action="home" id="${current.id}">Hi, ${current.firstName}</g:link>

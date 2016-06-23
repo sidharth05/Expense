@@ -24,7 +24,7 @@ class EditController {
         myUser.password = params.password
 
         myUser.save(flush: true)
-        render(view: "list", model: [allUsers: myUser])
+        render(view: "list", model: [current: myUser])
     }
 
     def delete() {
