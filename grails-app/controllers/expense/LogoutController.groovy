@@ -2,5 +2,9 @@ package expense
 
 class LogoutController {
 
-    def index() { }
+    def index() {
+        session.currentLogin = null
+        session.invalidate()
+        session.removeAttribute("currentLogin")
+    }
 }

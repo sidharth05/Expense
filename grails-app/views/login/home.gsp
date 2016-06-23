@@ -13,7 +13,30 @@
 </head>
 
 <body>
-    Welcome Home
-    "${current.id}"
+<div class="jumbotron">
+    <h1>Welcome Home</h1>
+</div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <g:each in="${current}" var="user">
+        <tr>
+            <td>
+                <g:link controller="edit" action="edit" id="${user.id}">${user.id}</g:link>
+            </td>
+            <td>${user.firstName}<br></td>
+            <td>${user.lastName}<br></td>
+            <td>${user.email}<br></td>
+        </tr>
+    </g:each>
+    </tbody>
+</table>
 </body>
 </html>
