@@ -31,7 +31,7 @@
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <g:link controller="login" action="home">Home</g:link>
+                    <g:link controller="login" action="home" id="${current.id}">Hi, ${current.firstName}</g:link>
                 </li>
                 <li>
                     <g:link controller="edit" action="edit">Edit</g:link>

@@ -24,7 +24,7 @@ class LoginController {
     }
 
     def home() {
-
+        [current: session.currentLogin]
     }
 
 }

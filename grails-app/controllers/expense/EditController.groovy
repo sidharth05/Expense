@@ -33,6 +33,8 @@ class EditController {
             return
         }
 
+        println params
+
         User PersonInstance = User.get(params.id)
 
         PersonInstance.delete(flush: true)

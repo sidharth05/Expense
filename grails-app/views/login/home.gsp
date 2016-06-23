@@ -28,9 +28,7 @@
     <tbody>
     <g:each in="${current}" var="user">
         <tr>
-            <td>
-                <g:link controller="edit" action="edit" id="${user.id}">${user.id}</g:link>
-            </td>
+            <td>${user.id}</td>
             <td>${user.firstName}<br></td>
             <td>${user.lastName}<br></td>
             <td>${user.email}<br></td>
