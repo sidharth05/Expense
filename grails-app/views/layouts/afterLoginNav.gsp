@@ -13,7 +13,7 @@
     <title><g:layoutTitle default="An example decorator" /></title>
     <asset:stylesheet href="bootstrap.min.css"/>
     <asset:javascript src="jquery.min.js"/>
-    <asset:javascript src="bootstrap.mn.js"/>
+    <asset:javascript src="bootstrap.min.js"/>
     <g:layoutHead />
 </head>
 
@@ -30,14 +30,19 @@
         </div>
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <g:link controller="login" action="home" id="${current.id}">Hi, ${current.firstName}</g:link>
-                </li>
-                <li>
-                    <g:link controller="edit" action="edit">Edit</g:link>
-                </li>
-                <li>
-                    <g:link controller="logout" action="logout">Logout</g:link>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <g:link controller="login" action="home" id="${current.id}">Hi, ${current.firstName}</g:link>
+                        </li>
+                        <li>
+                            <g:link controller="edit" action="edit">Edit</g:link>
+                        </li>
+                        <li>
+                            <g:link controller="logout" action="logout">Logout</g:link>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
