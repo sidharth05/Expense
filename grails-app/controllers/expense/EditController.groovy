@@ -5,8 +5,8 @@ class EditController {
     def edit() {
         if (!session.currentLogin) {
             redirect(controller: "login", action: "login")
-            return
         }
+        return([current: session.currentLogin])
     }
 
     def update() {
@@ -21,6 +21,7 @@ class EditController {
         myUser.firstName = params.firstName
         myUser.lastName = params.lastName
         myUser.email = params.email
+        myUser.password = params.password
 
         myUser.save(flush: true)
         render(view: "list", model: [allUsers: myUser])

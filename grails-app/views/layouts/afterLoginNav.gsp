@@ -31,10 +31,13 @@
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <g:link controller="login" action="home">Home</g:link>
+                </li>
+                <li>
                     <g:link controller="edit" action="edit">Edit</g:link>
                 </li>
                 <li>
-                    <g:link controller="login" action="login">Logout</g:link>
+                    <g:link controller="logout" action="logout">Logout</g:link>
                 </li>
             </ul>
         </div>

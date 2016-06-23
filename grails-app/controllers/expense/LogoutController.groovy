@@ -2,9 +2,8 @@ package expense
 
 class LogoutController {
 
-    def index() {
-        session.currentLogin = null
+    def logout() {
         session.invalidate()
-        session.removeAttribute("currentLogin")
+       redirect(controller: "login", action: "login")
     }
 }
