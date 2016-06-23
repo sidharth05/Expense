@@ -34,7 +34,7 @@
                     <g:link controller="edit" action="edit">Edit</g:link>
                 </li>
                 <li>
-                    <g:link controller="logout" action="index">Logout</g:link>
+                    <g:link controller="login" action="login">Logout</g:link>
                 </li>
             </ul>
         </div>

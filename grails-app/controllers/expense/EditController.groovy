@@ -23,7 +23,7 @@ class EditController {
 
             PersonInstance.delete(flush: true)
 
-            redirect(action: "list")
+            redirect(controller: "register", action: "register")
         }
 
         def list() {

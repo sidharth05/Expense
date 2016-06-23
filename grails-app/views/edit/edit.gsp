@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+<g:link controller="edit" action="delete" id="${params.id}">Delete Account</g:link>
 <g:form class="form-horizontal" controller="edit" action="update">
     <div class="form-group">
         <label for="id" class="col-sm-2 control-label">ID</label>

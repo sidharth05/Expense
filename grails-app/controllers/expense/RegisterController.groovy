@@ -14,9 +14,7 @@ class RegisterController {
 
         myUser.save()
 
-        session.currentUser = myUser
-
-        render(view: "list", model: [allUsers: session.currentUser])
+        render(view: "list", model: [allUsers: myUser])
     }
 
     def list() {
