@@ -14,7 +14,9 @@ class RegisterController {
 
         myUser.save()
 
-        render(view: "list", model: [allUsers: myUser])
+        session.currentLogin = myUser
+
+        redirect(controller: "login", action: "home", params: [current: session.currentLogin])
     }
 
     def list() {
