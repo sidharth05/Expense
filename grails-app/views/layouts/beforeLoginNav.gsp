@@ -10,11 +10,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><g:layoutTitle default="An example decorator" /></title>
+    <title><g:layoutTitle default="An example decorator"/></title>
     <asset:stylesheet href="bootstrap.min.css"/>
     <asset:javascript src="jquery.min.js"/>
     <asset:javascript src="bootstrap.min.js"/>
-    <g:layoutHead />
+    <g:layoutHead/>
 </head>
 
 <body>
@@ -28,24 +28,20 @@
             </button>
             <a class="navbar-brand" href="#">Form</a>
         </div>
+
         <div class="container collapse navbar-collapse" id="bs">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Login/SignUp<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <g:link controller="register" action="register">Register</g:link>
-                        </li>
-                        <li>
-                            <g:link controller="login" action="login">Login</g:link>
-                        </li>
-                    </ul>
+                <li>
+                    <g:link controller="register" action="register">Register</g:link>
+                </li>
+                <li>
+                    <g:link controller="login" action="login">Login</g:link>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 <div class="container">
     <g:layoutBody/>
 </div>

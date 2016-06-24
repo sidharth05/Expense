@@ -2,9 +2,14 @@ package expense
 
 class EditController {
 
+    def beforeInterceptor = {
+        
+    }
+
     def edit() {
         if (!session.currentLogin) {
             redirect(controller: "login", action: "login")
+            return
         }
         return([current: session.currentLogin])
     }
