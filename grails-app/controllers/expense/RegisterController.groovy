@@ -14,6 +14,8 @@ class RegisterController {
 
         myUser.save()
 
+
+
         session.currentLogin = myUser
 
         redirect(controller: "login", action: "home", params: [current: session.currentLogin])

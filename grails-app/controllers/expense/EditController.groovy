@@ -3,22 +3,17 @@ package expense
 class EditController {
 
     def beforeInterceptor = {
-        
+        if (!session.currentLogin) {
+            redirect(controller: "login", action: "login")
+            return false
+        }
     }
 
     def edit() {
-        if (!session.currentLogin) {
-            redirect(controller: "login", action: "login")
-            return
-        }
         return([current: session.currentLogin])
     }
 
     def update() {
-        if (!session.currentLogin) {
-            redirect(controller: "login", action: "login")
-            return
-        }
 
         println "Received parameters to update: ${params}"
         User myUser = User.get(params.id)
@@ -33,10 +28,6 @@ class EditController {
     }
 
     def delete() {
-        if (!session.currentLogin) {
-            redirect(controller: "login", action: "login")
-            return
-        }
 
         println params
 
@@ -48,10 +39,6 @@ class EditController {
     }
 
     def list() {
-        if (!session.currentLogin) {
-            redirect(controller: "login", action: "login")
-            return
-        }
 
     }
 }
